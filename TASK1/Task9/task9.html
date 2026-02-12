@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Email String Analyzer
+        </title>
+    </head>
+    <body>
+        <script>
+
+            //declaring email id
+            
+            let email = 'ashihasv28@gmail.com';
+            let username = email.split('@')[0]; //for before @
+            let domain = email.split('@')[1];  //for after @
+
+            //displaying the results
+
+            console.log(`Username:${username}`);
+            console.log(`Domain:${domain}`);
+
+        </script>
+    </body>
+</html>
