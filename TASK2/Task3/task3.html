@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Order Status</title>
+</head>
+<body>
+  <button onclick="checkOrder(true,true)
+    ">
+    Paid + Instock
+  </button>
+  <button onclick="checkOrder(true,false)">
+    paid + Out of Stock 
+  </button>
+  <button onclick="checkOrder(false,true)">
+      Not Paid
+  </button>
+  <script>
+    function checkOrder(isPaid,inStock){
+      if(isPaid && inStock){
+        alert('Order Confirmed');
+      }
+      else if(isPaid && !inStock){
+        alert('Order delayed');
+      }
+      else {
+        alert('Payment required');
+      }
+    }
+  </script>
+</body>
+</html>
