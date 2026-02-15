@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order and Discount Processor</title>
+</head>
+<body>
+  <button onclick="processOrder( 1000,false,'')">
+    Small
+  </button>
+  <button onclick="processOrder(2000,false,'SAVE10')">
+    Medium
+  </button>
+  <button onclick="processOrder(3500,true, '')">
+    Large
+  </button>
+  <script>
+    function validateCoupon(couponCode) {
+    if (!couponCode) {
+        return { valid: false, discount: 0, message:'No coupon applied'};
+    }
+
+    if (couponCode === 'SAVE10') {
+        return { valid: true, discount: 10, message:'Coupon SAVE10 applied'};
+    }
+
+    return { valid: true, discount: 5, message:'Default coupon applied'};
+}
+
+function processOrder(orderAmount, isMember, couponCode) {
+
+    if (typeof orderAmount !== 'number' || orderAmount <= 0) {
+        console.log('Invalid order amount');
+        return;
+    }
+
+    let discount = 0;
+    let coupon = validateCoupon(couponCode);
+
+    if (orderAmount >= 3000 || isMember) {
+        discount = 20;
+    }
+    else if (orderAmount >= 1500 && couponCode === 'SAVE10') {
+        discount = 10;
+    }
+    else if (!couponCode) {
+        discount = 0;
+    }
+    else {
+        discount = 5;
+    }
+
+    let discountAmount = (orderAmount * discount) / 100;
+    let finalAmount = orderAmount - discountAmount;
+
+    let delivery =0;
+    if(finalAmount >= 2000){
+      console.log('Free Delivery')
+    }
+    else{
+      delivery=100;
+    }
+    finalAmount+=delivery; //with delivery charge
+
+    console.log(`Order Amount:${orderAmount}.\nDiscount:${discount}%.\nFinal Amount:${finalAmount}.\nDelivery:${delivery}.\nCoupon:${couponCode.message}`);
+}
+
+  </script>
+</body>
+</html>
