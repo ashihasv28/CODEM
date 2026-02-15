@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Toss Game</title>
+</head>
+<body>
+  <button onclick="PassPlayerChoice('Head')">
+    Head
+  </button>
+  <button onclick="PassPlayerChoice('Tail')">
+    Tail
+  </button>
+  <script>
+    let computerChoice = '';
+    let result='';
+    function PassPlayerChoice(playerChoice){
+      const randomNumber = Math.random(); //built in function and it is only between 0 and 1
+      if(randomNumber<0.5){
+        computerChoice='Head';
+      }
+      else {
+        computerChoice='Tail';
+      }
+      if(computerChoice===playerChoice){
+        result= 'player wins'; //result
+        alert(`Result is ${result}`);
+        alert(`Player Choice is ${playerChoice}`);
+        alert(`Computer Choice is ${computerChoice}`);
+        
+      }
+      else{
+        result= 'player loss'; //result
+        alert(`Result is ${result}`);
+        alert(`Player Choice is ${playerChoice}`);
+        alert(`Computer Choice is ${computerChoice}`);
+      }
+    }
+  </script>
+</body>
+</html>
