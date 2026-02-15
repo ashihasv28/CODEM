@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket Permission</title>
+</head>
+<body>
+ <button onclick="
+ checkTicket(19,false)
+  ">
+  Adult
+ </button> 
+ <button onclick="
+ checkTicket(16,true)
+ ">
+  Teen
+ </button>
+ <button onclick="
+ checkTicket(10,true)
+ ">
+  Child
+ </button>
+ <script>
+  function checkTicket(age,hasPermission){
+    if(age>=13 && age<=17){
+      if(hasPermission===true){
+        console.log('Allowed');
+      }
+      else{
+        console.log('Not Allowed');
+      }
+    }
+    else{
+      console.log('Allowed');
+    }
+  }
+ </script>
+</body>
+</html>
