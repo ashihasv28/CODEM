@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Security Check</title>
+</head>
+<body>
+    <script>
+        function accountAccess(passwordStatus,OTPverification,accountBlockStatus){
+            if(passwordStatus==='valid' && OTPverification==='yes' && accountBlockStatus==='no'){
+                console.log('Login  Success'); //success
+            }
+            else{
+                console.log('Login Failure'); //failure
+            }
+        }
+        accountAccess('valid','yes','no'); //valid: function calling
+        accountAccess('notvalid','no','yes'); //not valid: function calling
+    </script>
+</body>
+</html>
