@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Filter</title>
+</head>
+<body>
+    <script>
+        function checkNotification(messageContent,urgencyFlag){
+            if(urgencyFlag){
+                alert(`Important Message and the message is ${messageContent}`); //important message
+            }
+            else{
+                alert(`Normal Message and the message is ${messageContent}`); //normal message
+            }
+        }
+        checkNotification('Exam Tomorrow',true);
+    </script>
+</body>
+</html>
