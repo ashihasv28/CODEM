@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Validator</title>
+</head>
+<body>
+    <script>
+        function checkPasswordContent(length,characters){
+            let result;
+            if(length<6&&characters===0){
+                result='Weak'; //password is weak
+            }
+            else if(length>=6&&characters===1){
+                result='Medium';//password is medium
+            }
+            else if(length>=8&&characters>1){
+                result='Strong';
+            }
+            console.log(`Result:${result} Password`);
+        }
+        checkPasswordContent(8,2);
+    </script>
+</body>
+</html>
