@@ -6,12 +6,6 @@
   <title>Travel Eligibility Checker</title>
 </head>
 <body>
-  <button onclick="checkTravelEligibility(20,'normal',true)">
-    Normal
-  </button>
-  <button onclick="checkTravelEligibility(10,'priority',true)">
-    Priority
-  </button>
   <script>
     function checkTravelEligibility(age,ticketType,hasID){
       if(age<=0){
@@ -38,6 +32,9 @@
       }
       console.log(`Age:${age}\nTicket:${ticketType}\nFare:${fare}\nEligibility: ${eligibility}`);
     }
+    checkTravelEligibility(20,'normal',true);
+    checkTravelEligibility(19,'priority',true);
   </script>
+  
 </body>
 </html>
