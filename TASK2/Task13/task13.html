@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation System</title>
+</head>
+<body>
+    <script>
+        function checkAppointment(dateAvailable,userConfirmed){
+            if(!dateAvailable){
+                alert('Appointment Rejected');
+            }
+            else if(!userConfirmed){
+                alert('Appointment Rejected');
+            }
+            else{
+                alert('Appointment Confirmed');
+            }
+        }
+        checkAppointment(true,true);
+    </script>
+</body>
+</html>
