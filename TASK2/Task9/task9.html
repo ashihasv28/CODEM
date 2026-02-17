@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Intent Detection</title>
+</head>
+<body>
+    <script>
+        function detectIntent(message){
+            if(message===' ' || message===''){
+                console.log('Invalid message');
+                return;
+            }
+            let lower = message.toLowerCase(); //javascript text comparison is case-sensitive
+            let isQuestion = lower.includes('?');
+            let isComplaint = lower.includes('problem') || lower.includes('not working');
+            
+            let intent;
+
+            if(isQuestion && isComplaint){
+                intent='Urgent request';
+            }
+            else if(isComplaint){
+                intent='Complaint';
+            }
+            else if(isQuestion){
+                intent='Question';
+            }
+            else{
+                intent='Other';
+            }
+            console.log(`Intent:${intent}\nMessage:${message}` );
+
+        }
+        detectIntent('My System not working?')
+        detectIntent(' ');
+    </script>
+</body>
+</html>
