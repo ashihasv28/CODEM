@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Action Advisor</title>
+</head>
+<body>
+    <script>
+        function weatherAction(weatherCondition,temperature){
+            if(weatherCondition==='rainy'){
+                alert('Carry Umbrella');
+            }
+            else if(weatherCondition==='sunny' && temperature>30){
+                alert('Stay Hydrated');
+            }
+            else if(weatherCondition==='cold' && temperature<15)
+            {
+                alert('Wear Warm Clothes');
+            }
+            else{
+                alert('Wear Normal');
+            }
+        }
+        weatherAction('sunny',32);
+    </script>
+    
+</body>
+</html>
