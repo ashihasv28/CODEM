@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Priority Formatter</title>
+</head>
+<body>
+  <script>
+    function processMessage(message,isUrgent){
+      if(!message){
+        console.log('Message cannot be empty');
+        return;
+      }
+      let hasWarningWord = message.includes('error') || message.includes('fail');
+      let isHighPriority = isUrgent || hasWarningWord;
+      let finalMessage;
+      if(isHighPriority){
+        finalMessage= '⚠️ IMPORTANT:'+ message.toUpperCase();
+      }
+      else{
+        finalMessage = 'INFO:' + message.toLowerCase();
+      }
+      console.log(`Message:${finalMessage}\nHigh Priority:${isHighPriority}`);
+    }
+    processMessage('error',true);
+    processMessage('hello world',false);
+    processMessage('',false);
+  </script>
+  
+</body>
+</html>
