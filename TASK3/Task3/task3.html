@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Shopping Cart Object</title>
+</head>
+<body>
+  <script>
+    let cart={
+      items:[
+        { name:'Shirt',price:20,quantity:2},
 
+        { name:'Shoes',price:50,quantity:1 }
+      ]
+    };
+
+    let total=0;
+    cart.items.forEach(item => {
+      total += item.price * item.quantity;
+    });
+
+    console.log(`Total Cost: $${total}`);
+  </script>
+</body>
+</html>
