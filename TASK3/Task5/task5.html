@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Methods Using this</title>
+</head>
+<body>
+  <script>
+    let account={
+      owner:'Ashiha',
+      balance:1000,
+      deposit(amount) //function inside object
+      {
+        this.balance += amount; //this is the dynamic pointer to the object 
+        console.log('Updated Balance:',this.balance);
+      }
+    };
+    account.deposit(500);
+    console.log('Final State:',account);
+  </script>
+</body>
+</html>
