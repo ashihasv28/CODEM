@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selecting Elements & Updating Content</title>
+</head>
+<body>
+
+  <h2 id="title">Old Title</h2>
+  <p class="text">Paragraph 1</p>
+  <p class="text">Paragraph 2</p>
+  <div class="box">Box</div>
+  <script>
+    let title=document.getElementById("title");
+    let texts=document.getElementsByClassName("text");
+    let box=document.querySelector(".box");
+
+    title.textContent="New Title";
+    title.style.color="blue";
+
+    for(let t of texts){
+      t.textContent="Updated Text";
+      t.style.fontWeight="bold";
+    }
+
+    box.textContent="Updated Box";
+    box.style.backgroundcolor="yellow";
+  </script>
+</body>
+</html>
