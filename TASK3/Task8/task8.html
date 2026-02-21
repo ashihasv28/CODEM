@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamically Create a List from Objects</title>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    let users=[{
+      name:"Ashiha",age:19
+    },{
+      name:"Vanaja",age:50
+    }
+    ];
+    let container = document.getElementById("container");
+    let ul = document.createElement("ul");
+    users.forEach(user=> {
+      let li = document.createElement("li");
+      li.textContent = `${user.name} - ${user.age}`;
+      ul.append(li);
+    });
+
+    container.appendChild(ul);
+  </script>
+</body>
+</html>
