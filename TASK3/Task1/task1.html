@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile Object Manipulaion</title>
+</head>
+<body>
+  <script>
+    //creating object
+    let userProfile = { 
+      name:'Ashiha',
+      age:19,
+      email:'ashihasv28@gmail.com',
+      isActive:true
+    };
+
+    //Dot notation
+    userProfile.name='Mizhina';
+    userProfile.age=7;
+
+    //Bracket notation
+    userProfile['email']='mizhinajoey14@gmail.com';
+    userProfile['isActive']=false;
+
+    //Adding new property
+    userProfile['role']='student';
+
+    //Displaying 
+    console.log('Updated Object',userProfile); //updated object
+    console.log('Name:',userProfile.name);
+    console.log('Age:',userProfile.age);
+    console.log('Email:',userProfile.email); 
+    console.log('Active Status:',userProfile.isActive);
+    console.log('Role:',userProfile.role);
+  </script>
+</body>
+</html>
