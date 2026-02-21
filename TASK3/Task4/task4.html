@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping Through Student Marks</title>
+</head>
+<body>
+  <script>
+    let students ={
+     Ashiha:98,
+     Eleven:59,
+     Benny:10
+    };
+
+    let passMark = 50;
+
+    for(let name in students){
+      let status = students[name]>=passMark? 'Pass':'Fail'; //ternary operator
+      console.log(`${name}:${students[name]} - ${status}`); //template literal
+    }
+  </script>
+</body>
+</html>
