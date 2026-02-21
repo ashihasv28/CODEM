@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Modifying an Object</title>
+</head>
+<body>
+  <script>
+    //creating an object
+    let product = {
+      name:'Dress',
+      cost:250,
+      stock:20
+    };
+    //creating a function
+    function updateProduct(item) //when you pass an object into a function: The parameter can be anything
+    {
+      item.cost += 80;
+      item.stock -= 5;
+      return `Product Name:${item.name}\nNew Cost:${item.cost}\nRemaining Stock:${item.stock}`;
+    }
+
+    //calling the function
+    let message= updateProduct(product);
+   //Displaying the message
+    console.log(message);
+    console.log('Updated Object:',product)
+  </script>
+</body>
+</html>
