@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Class on Multiple Elements</title>
+  <style>
+    .highlight {
+      background: yellow;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<button id="btn">Toggle</button>
+
+<p class="item">Item1</p>
+<p class="item">Item2</p>
+<p class="item">Item3</p>
+
+<script>
+  // Selecting the button by ID
+  const btn = document.getElementById("btn");
+
+  // Selecting all elements with class "item" using querySelectorAll
+  const items = document.querySelectorAll(".item");
+
+  // Adding click event 
+  btn.addEventListener("click", () => {
+    items.forEach(item => {
+      item.classList.toggle("highlight");
+    });
+  });
+</script>
+
+</body>
+</html>
