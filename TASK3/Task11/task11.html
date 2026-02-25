@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using the Event Object with Multiple Buttons</title>
+</head>
+<body>
+  <button>Button 1</button>
+  <button>Button 2</button>
+  <button>Button 3</button>
+  <p id="output"></p>
+  <script>
+  let buttons=document.querySelectorAll("button");
+  let output =document.getElementById("output");
+  buttons.forEach(btn =>{
+    btn.addEventListener("click",
+  function(event) {
+      output.textContent = `Clicked: ${event.target.textContent}, Event: ${event.type}`;
+    });
+  });
+  </script>
+</body>
+</html>
