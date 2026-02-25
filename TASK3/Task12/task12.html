@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" id="name" placeholder="Name">
+    <span id="nameError"></span><br>
+    <input type="email" id="email" placeholder="Email">
+    <span id="emailError"></span><br>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    let form = document.getElementById("form");
+    // Add these lines for input
+    let nameInput = document.getElementById("name");
+    let emailInput = document.getElementById("email");
+
+    form.addEventListener("submit",
+     function(e) {
+      e.preventDefault();
+      let valid = true;
+      if (!nameInput.value.trim()) {
+        nameError.textContent = "Name required";
+        valid = false;
+      } 
+      else 
+      {
+        nameError.textContent = "";
+      }
+      if (!emailInput.value.trim()) {
+        emailError.textContent = "Email required";
+        valid = false;
+      } 
+      else {
+        emailError.textContent = "";
+      }
+      if (valid) alert("Form Submitted!");
+    });
+  </script>
+</body>
+</html>
