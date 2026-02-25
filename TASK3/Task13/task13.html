@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmation System</title>
+  <style>
+    .invalid { border: 2px solid red; }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="username" placeholder="Username">
+  <span id="msg"></span>
+
+  <script>
+    //inputs
+    let username = document.getElementById("username");
+    let msg = document.getElementById("msg");
+
+    username.addEventListener("input", () => {
+      if (username.value.length < 3) {
+        username.classList.add("invalid");
+        msg.textContent = "Minimum 3 characters";
+      } else {
+        username.classList.remove("invalid");
+        msg.textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
