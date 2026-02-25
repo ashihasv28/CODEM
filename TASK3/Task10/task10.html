@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attribute Manipulation</title>
+</head>
+<body>
+  <button id="toggleBtn">
+    Toggle Disabled 
+  </button>
+  <input type="text" id="inputField">
+  <script>
+    let btn=document.getElementById("toggleBtn");
+    let input=document.getElementById("inputField");
+    btn.addEventListener("click",()=>{
+      if(input.hasAttribute("disabled")){
+        input.removeAttribute("disabled");
+      }
+      else{
+        input.setAttribute("disabled","true");
+      }
+      console.log("Disabled:",input.hasAttribute("disabled"));
+    });
+  </script>
+</body>
+</html>
