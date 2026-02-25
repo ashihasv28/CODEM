@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Events Interaction</title>
+</head>
+<body>
+
+  <h2 id="display">Press a key</h2>
+
+  <script>
+    let display = document.getElementById("display");
+
+    document.addEventListener("keydown", function(event) {
+      display.textContent = "Key Down: " + event.key;
+    });
+
+    document.addEventListener("keyup", function(event) {
+      console.log("Key Released: ", event.key);
+    });
+  </script>
+</body>
+</html>
