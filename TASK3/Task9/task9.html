@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Traversal</title>
+</head>
+<body>
+  <div id="parent">
+    <p>Child1</p>
+    <p id="target">Child2</p>
+    <p>Child3</p>
+  </div>
+  <script>
+    let target=document.getElementById("target");
+    target.parentElement.style.border="2x solid red";
+    //updating textcontent
+    target.previousElementSibling.textContent="Updated Child";
+    target.nextElementSibling.style.color="blue";
+  </script>
+</body>
+</html>
