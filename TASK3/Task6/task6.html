@@ -3,29 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selecting Elements & Updating Content</title>
+  <title>Selecting Elements and Updating Content</title>
 </head>
 <body>
-
-  <h2 id="title">Old Title</h2>
-  <p class="text">Paragraph 1</p>
-  <p class="text">Paragraph 2</p>
-  <div class="box">Box</div>
+  <h1 id="title">Old Title</h1>
+  <p class="text">This is the first text</p>
+  <p class="text">This is the second text</p>
+  <div class="box">Old box</div>
   <script>
-    let title=document.getElementById("title");
-    let texts=document.getElementsByClassName("text");
-    let box=document.querySelector(".box");
+    //selecting the Id
+    let title= document.getElementById("title");
+    //selecting the class
+    let text= document.getElementsByClassName("text");
+    //selecting by querySelector
+    let box= document.querySelector(".box");
 
+    //changing the text
     title.textContent="New Title";
-    title.style.color="blue";
 
-    for(let t of texts){
-      t.textContent="Updated Text";
-      t.style.fontWeight="bold";
-    }
+    text[0].textContent="Updated Text";
+    text[1].textContent="Updated Text";
 
     box.textContent="Updated Box";
-    box.style.backgroundcolor="yellow";
+
+    //changing atleast two styles
+    title.style.color="blue";
+    title.style.fontSize="30px";
+
+    text[0].style.color="green";
+    text[1].style.color="green";
+
+    box.style.backgroundColor="yellow";
+    box.style.color="red";
+
   </script>
 </body>
 </html>
