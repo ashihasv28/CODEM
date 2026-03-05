@@ -1,0 +1,38 @@
+body{
+
+  font-family: Arial;
+  padding: 20px;
+
+}
+
+.passwordBox{
+
+  width: 320px;
+
+}
+
+.input{
+
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+
+}
+
+.rule{
+
+  margin: 4px 0;
+
+}
+
+.pass{
+
+  color: green;
+
+}
+
+.fail{
+
+  color: red;
+
+}
