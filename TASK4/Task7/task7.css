@@ -1,0 +1,24 @@
+body{
+  font-family: Arial;
+  padding:20px;
+}
+
+label{
+  display:block;
+  margin-top:10px;
+}
+
+input{
+  padding:6px;
+  width:200px;
+}
+
+button{
+  margin-top:10px;
+  padding:6px 12px;
+  cursor:pointer;
+}
+
+.submit{
+  margin-top:30px;
+}
