@@ -1,0 +1,36 @@
+body{
+
+  font-family: Arial;
+  padding: 20px;
+
+}
+
+.commentBox{
+
+  width: 320px;
+
+}
+
+.input{
+
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 8px;
+
+}
+
+button{
+
+  padding: 6px 10px;
+  margin-bottom: 12px;
+
+}
+
+.comment{
+
+  background: #f3f3f3;
+  padding: 6px;
+  margin: 4px 0;
+  border: 1px solid #ddd;
+
+}
