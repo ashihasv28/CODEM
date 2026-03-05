@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+.scoreboard div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.player{
+    width: 80px;
+}
+
+.score{
+    width: 30px;
+    text-align: center;
+}
+
+button{
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.highest{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.lowest{
+    font-weight: bold;
+}
