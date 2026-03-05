@@ -1,0 +1,22 @@
+body{
+
+  font-family: Arial;
+  padding: 20px;
+
+}
+
+.grid{
+
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  gap: 8px;
+
+}
+
+.cell{
+
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ccc;
+
+}
