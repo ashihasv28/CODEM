@@ -18,6 +18,21 @@ body{
 
 }
 
+.name{
+
+  display: inline-block;
+  width: 90px;
+
+}
+
+.qty{
+
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+
+}
+
 button{
 
   margin-left: 4px;
