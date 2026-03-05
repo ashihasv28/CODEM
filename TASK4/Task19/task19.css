@@ -1,0 +1,22 @@
+body{
+
+  font-family: Arial;
+  padding: 20px;
+
+}
+
+.dashboard{
+
+  display: flex;
+  gap: 15px;
+
+}
+
+.card{
+
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 140px;
+  text-align: center;
+
+}
