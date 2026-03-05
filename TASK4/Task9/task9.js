@@ -14,7 +14,16 @@ function showItems(){
 
     let li = document.createElement('li');
 
-    li.innerText = items[i].product + ' : ' + items[i].quantity;
+    let name = document.createElement('span');
+    name.className = 'name';
+    name.innerText = items[i].product + ' :';
+
+    let qty = document.createElement('span');
+    qty.className = 'qty';
+    qty.innerText = items[i].quantity;
+
+    li.appendChild(name);
+    li.appendChild(qty);
 
     let add = document.createElement('button');
     add.innerText = '+';
