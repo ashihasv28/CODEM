@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Filter Product List</title>
+  <link rel='stylesheet' href='styles/task2.css'>
+</head>
+
+<body>
+
+  <div class='container'>
+
+  <h2>Product Filter</h2>
+
+  <div class='filters'>
+
+  <select class='category'>
+  <option value='all'>All</option>
+  <option value='phone'>Phone</option>
+  <option value='laptop'>Laptop</option>
+  </select>
+
+  <input type='number' class='min' placeholder='Min Price' oninput='updateMax()'>
+  <input type='number' class='max' placeholder='Max Price'>
+
+  <button onclick='filterProducts()'>Filter</button>
+
+  </div>
+
+  <table class='products'>
+  <thead>
+  <tr>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Category</th>
+  </tr>
+  </thead>
+
+  <tbody class='productBody'>
+  </tbody>
+
+  </table>
+
+  <p class='message'></p>
+
+  </div>
+
+  <script src='scripts/task2.js'></script>
+
+</body>
+</html>
