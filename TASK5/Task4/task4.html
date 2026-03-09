@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with Default Parameters Requirements</title>
+</head>
+<body>
+    <script>
+        function calculateDiscount(price,discountPercentage = 0){
+            return price-(price*discountPercentage)/100;
+            
+        }
+        let resultWithDiscount =  calculateDiscount(10000, 10);
+        let resultWithoutDiscount =  calculateDiscount(1000);
+
+        console.log(resultWithDiscount);
+        console.log(resultWithoutDiscount);
+    </script>
+</body>
+</html>
