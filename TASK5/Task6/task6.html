@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation-Input Presence Check</title>
+</head>
+<body>
+    <form onsubmit='validateForm(event)'>
+        <input type='text' class='name' placeholder='Name'>
+        <input type='text' class='email' placeholder='Email'>
+        <button type='submit'>Submit</button>
+    </form>
+
+    <script>
+        
+        function validateForm(event){
+
+            event.preventDefault();
+
+            let name = document.querySelector('.name').value;
+            let email = document.querySelector('.email').value;
+
+            if(name === '' || email === ''){
+                console.log('Fields cannot be empty');
+            }
+
+            console.log('Form submitted');
+        
+        }
+
+    </script>
+
+</body>
+</html>
