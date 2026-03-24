@@ -1,0 +1,3 @@
+Node.js is powerful.
+Many companies use node.js.
+Node.js is great.
