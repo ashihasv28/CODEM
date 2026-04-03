@@ -1,0 +1,4 @@
+This is a large file.
+You can add multiple paragraphs here.
+Node.js streams help to handle large files efficiently.
+Keep adding more lines to simulate a big file.
