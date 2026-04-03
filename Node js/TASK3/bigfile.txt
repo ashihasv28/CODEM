@@ -1,2 +1,0 @@
-This is the content of the file.
-Add more lines if needed to simulate a big file.
