@@ -24,7 +24,6 @@ function saveProcessed(lines) {
         });
 }
 
-// Step 4: Watch File and Process
 function watchAndProcess(filename) {
     fs.watch(filename, async (eventType) => {
         if (eventType === 'change' && !isProcessing) {
