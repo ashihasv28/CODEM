@@ -1,5 +1,3 @@
-// app.js
-
 const fs = require('fs');
 
 fs.readFile('users.txt', 'utf8', (err, data) => {
