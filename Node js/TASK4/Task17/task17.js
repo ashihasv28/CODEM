@@ -1,33 +1,17 @@
 const express = require('express');
-const router = express.Router();
+const app = express();
+const PORT = 3000;
 
-let users = [
-    { id: 1, name: "Ashiha" },
-    { id: 2, name: "Sai" }
-];
+const userRoutes = require('./routes/users');
 
-router.get('/', (req, res) => {
-    console.log("Users route accessed");
-    res.status(200).json({
-        message: "User routes working",
-        data: users
-    });
+app.use(express.json());
+
+app.use('/api/users', userRoutes);
+
+app.use((req, res) => {
+    res.status(404).json({ error: "Route not found" });
 });
 
-router.post('/', (req, res) => {
-    const { id, name } = req.body;
-
-    if (!id || !name) {
-        return res.status(400).json({
-            error: "id and name required"
-        });
-    }
-
-    users.push({ id, name });
-
-    res.status(201).json({
-        message: "User added"
-    });
+app.listen(PORT, () => {
+    console.log("Server running on port 3000");
 });
-
-module.exports = router;
